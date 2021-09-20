@@ -65,6 +65,7 @@ roll={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="PlayerHutBox"
 2d_physics/layer_4="EnemieHurtBox"
+2d_physics/layer_5="Enemy"
 
 [physics]
 
