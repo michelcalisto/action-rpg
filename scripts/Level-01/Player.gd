@@ -5,7 +5,7 @@ export var max_speed = 80
 export var friction = 500
 export var roll_speed = 120
 var velocity = Vector2.ZERO
-var roll_vector = Vector2.LEFT
+var roll_vector = Vector2.DOWN
 enum {move, roll, attack}
 var state = move
 onready var animationPlayer = $AnimationPlayer
