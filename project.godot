@@ -70,6 +70,7 @@ roll={
 2d_physics/layer_3="PlayerHutBox"
 2d_physics/layer_4="EnemieHurtBox"
 2d_physics/layer_5="Enemy"
+2d_physics/layer_6="SoftCollisions"
 
 [physics]
 
