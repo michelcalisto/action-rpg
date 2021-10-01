@@ -486,8 +486,10 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="Level-01" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
-margin_right = 320.0
-margin_bottom = 180.0
+margin_left = -161.0
+margin_top = -122.0
+margin_right = 472.0
+margin_bottom = 305.0
 texture = ExtResource( 3 )
 stretch_mode = 2
 __meta__ = {
@@ -506,10 +508,18 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 1, -65532, 0, 5, -65531, 0, 196610, 65535, 0, 65536, 0, 0, 65537, 1, 0, 65537, 2, 0, 65541, 3, 0, 131073, 4, 0, 131074, 131071, 0, 131072, 65536, 0, 65544, 65537, 0, 131073, 65538, 0, 131074, 131072, 0, 131075, 131081, 0, 3, 196613, 0, 196611, 196616, 0, 4, 196617, 0, 196615, 262151, 0, 196608, 262152, 0, 196615, 393215, 0, 196608, 327680, 0, 196609, 327681, 0, 196609, 327682, 0, 196609, 327683, 0, 196610 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 184, 56 )
+current = true
+smoothing_enabled = true
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 184, 56 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera2D")
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -551,7 +561,9 @@ position = Vector2( 40, 128 )
 [node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 240, 88 )
 
-[node name="HealthUI" parent="." instance=ExtResource( 8 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 8 )]
 margin_left = 3.0
 margin_top = 3.0
 margin_right = 43.0
