@@ -513,10 +513,10 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -6
 position = Vector2( 184, 56 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="0"]
-position = Vector2( 323.042, 193.079 )
+position = Vector2( 346.78, 217.729 )
 
 [node name="TopLeft" parent="Camera2D/Limits" index="1"]
-position = Vector2( -35.9556, -35.7141 )
+position = Vector2( -71.2391, -61.9778 )
 
 [node name="YSort" type="YSort" parent="."]
 
